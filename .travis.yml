@@ -7,7 +7,7 @@ before_install:
   - docker build -t frankypassword123/react-app -f ./client/Dev.Dockerfile ./client
 
 script:
-  - docker run -e CI=true apshuk21/react-app npm test
+  - docker run -e CI=true frankypassword123/react-app npm test
 
 after_success:
   - docker build -t frankypassword123/multi-client ./client
